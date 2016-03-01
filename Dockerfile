@@ -16,6 +16,7 @@ RUN apt-get install -y language-pack-en-base && \
     imagemagick \
     ca-certificates \
     php7.0 \
+    php7.0-bcmath php7.0-bz2 \
     php7.0-cli \
     php7.0-dev \
     php7.0-mysql \
@@ -30,6 +31,8 @@ RUN apt-get install -y language-pack-en-base && \
     php7.0-json \
     php7.0-opcache \
     php7.0-recode \
+    php7.0-xml \
+    php7.0-zip \
     php7.0-fpm && \
 
     curl https://getcomposer.org/installer | php -- && mv composer.phar /usr/local/bin/composer && chmod +x /usr/local/bin/composer && \
