@@ -1,1 +1,1 @@
-docker run --name php7 mychiara/php7
+docker run -d --name php7 mychiara/php7

@@ -6,20 +6,21 @@ It' s using PHP 7 and installs some very basic PHP modules.
 
 ### PHP modules
 
-* php7-cli 
-* php7-dev 
-* php7-apcu 
-* php7-json 
-* php7-pgsql 
-* php7-mysql 
-* php7-mongo 
-* php7-sqlite 
-* php7-mcrypt  
-* php7-ldap 
-* php7-intl 
-* php7-gd 
-* php7-curl 
-* php7-readline 
+* php7.0-cli 
+* php7.0-dev 
+* php7.0-mysql 
+* php7.0-mbstring
+* php7.0-mcrypt 
+* php7.0-ldap 
+* php7.0-gd 
+* php7.0-curl 
+* php7.0-sqlite 
+* php7.0-intl 
+* php7.0-common 
+* php7.0-json 
+* php7.0-opcache 
+* php7.0-recode 
+* php7.0-fpm
 
 It also includes composer and uses php-fpm by default so it's well suited for usage in conjunction with nginx fastcgi.
 
