@@ -16,9 +16,11 @@ RUN apt-get install -y language-pack-en-base && \
     imagemagick \
     ca-certificates \
     php7.0 \
-    php7.0-bcmath php7.0-bz2 \
     php7.0-cli \
     php7.0-dev \
+    php7.0-fpm \
+    php7.0-bcmath \
+    php7.0-bz2 \
     php7.0-mysql \
     php7.0-mbstring \
     php7.0-mcrypt \
@@ -33,7 +35,7 @@ RUN apt-get install -y language-pack-en-base && \
     php7.0-recode \
     php7.0-xml \
     php7.0-zip \
-    php7.0-fpm && \
+    && \
 
     curl https://getcomposer.org/installer | php -- && mv composer.phar /usr/local/bin/composer && chmod +x /usr/local/bin/composer && \
     mkdir -p /var/log/php && ln -sf /dev/stdout /var/log/php/error.log && ln -sf /dev/stdout /var/log/php7-fpm.log && \
@@ -51,9 +53,10 @@ RUN git clone https://github.com/phpredis/phpredis.git && \
     rm -rf phpredis
 
 # Copy local .inis to the image
-COPY files/php.ini /etc/php7/fpm/php.ini
-COPY files/php-cli.ini /etc/php7/cli/php.ini
-COPY files/php-fpm.conf /etc/php7/fpm/php-fpm.conf
+ADD files/php.ini /etc/php/7.0/fpm/php.ini
+ADD files/php-cli.ini /etc/php/7.0/cli/php.ini
+ADD files/php-fpm.conf /etc/php/7.0/fpm/php-fpm.conf
+ADD files/www.conf /etc/php/7.0/fpm/pool.d/www.conf
 
 RUN echo "extension=redis.so" > /etc/php/7.0/mods-available/redis.ini && \
     ln -sf /etc/php/7.0/mods-available/redis.ini /etc/php/7.0/fpm/conf.d/20-redis.ini && \
