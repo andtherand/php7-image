@@ -26,6 +26,7 @@ RUN apt-get install -y language-pack-en-base && \
     php7.0-mcrypt \
     php7.0-ldap \
     php7.0-gd \
+    php-imagick \
     php7.0-curl \
     php7.0-sqlite \
     php7.0-intl \
@@ -33,6 +34,7 @@ RUN apt-get install -y language-pack-en-base && \
     php7.0-json \
     php7.0-opcache \
     php7.0-recode \
+    php-redis \
     php7.0-xml \
     php7.0-zip \
     && \
@@ -43,14 +45,14 @@ RUN apt-get install -y language-pack-en-base && \
     apt-get autoclean && apt-get -y autoremove && \
     apt-get clean && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 
-RUN git clone https://github.com/phpredis/phpredis.git && \
-    cd phpredis && \
-    git checkout php7 && \
-    phpize && \
-    ./configure && \
-    make && make install && \
-    cd .. && \
-    rm -rf phpredis
+# RUN git clone https://github.com/phpredis/phpredis.git && \
+#     cd phpredis && \
+#     git checkout php7 && \
+#     phpize && \
+#     ./configure && \
+#     make && make install && \
+#     cd .. && \
+#     rm -rf phpredis
 
 # Copy local .inis to the image
 ADD files/php.ini /etc/php/7.0/fpm/php.ini

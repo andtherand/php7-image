@@ -17,6 +17,7 @@ It' s using PHP 7 and installs some very basic PHP modules.
 * php7.0-mcrypt 
 * php7.0-ldap 
 * php7.0-gd 
+* php-imagick // via ppa:ondrej
 * php7.0-curl 
 * php7.0-sqlite 
 * php7.0-intl 
@@ -24,6 +25,7 @@ It' s using PHP 7 and installs some very basic PHP modules.
 * php7.0-json 
 * php7.0-opcache 
 * php7.0-recode 
+* php-redis // via ppa:ondrej
 * php7.0-xml 
 * php7.0-zip 
 
