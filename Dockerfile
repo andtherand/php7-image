@@ -1,6 +1,6 @@
 #!/usr/bin/env docker
 
-FROM mychiara/webbase:1.0.0
+FROM mychiara/webbase:latest
 MAINTAINER Andy Ruck mychiara+docker   ___at___   gmail com
 
 ENV DEBIAN_FRONTEND noninteractive
