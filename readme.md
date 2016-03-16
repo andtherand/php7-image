@@ -26,6 +26,7 @@ It' s using PHP 7 and installs some very basic PHP modules.
 * php7.0-opcache 
 * php7.0-recode 
 * php-redis // via ppa:ondrej
+* php7.0-soap 
 * php7.0-xml 
 * php7.0-zip 
 
