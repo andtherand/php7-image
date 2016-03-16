@@ -35,6 +35,7 @@ RUN apt-get install -y language-pack-en-base && \
     php7.0-opcache \
     php7.0-recode \
     php-redis \
+    php7.0-soap \
     php7.0-xml \
     php7.0-zip \
     && \
